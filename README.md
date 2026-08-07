@@ -17,10 +17,9 @@ Open `http://localhost:8000`.
 - **Contact form isn't wired up.** `contact.html` has a real-looking form with no
   submission handler. Needs Formspree, Netlify Forms, or an equivalent before
   launch.
-- **Booking links point at the old Squarespace `/appointments` page.** That's
-  intentional for now, since Carrie's real booking flow lives there, but once this
-  site takes over the domain, that link needs to point wherever the booking system
-  actually ends up living.
+- ~~Booking links point at the old Squarespace `/appointments` page.~~ Fixed:
+  every "Book a Consult" link now points at Carrie's real IntakeQ booking page
+  (`curanatalhealth.intakeq.com`).
 - **No phone number or physical address is published anywhere**, matching the
   current live site. If Carrie wants either listed (for local SEO, a phone number
   in particular helps), add it to the footer and to the JSON-LD in `index.html`.
