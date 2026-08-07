@@ -105,20 +105,29 @@ header.site .brand span {
   letter-spacing: .1em; text-transform: uppercase;
   white-space: nowrap;
 }
-header.site nav.primary { margin-left: auto; display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 header.site nav.primary a {
   font-size: 14px; color: var(--ink); text-decoration: none;
-  padding: 8px 12px; border-radius: 999px;
+  border-radius: 999px;
   white-space: nowrap;
 }
 header.site nav.primary a:hover,
 header.site nav.primary a[aria-current="page"] { background: var(--surface); }
 header.site nav.primary a.cta {
   background: var(--plum); color: var(--paper); font-weight: 600;
-  padding: 10px 20px;
 }
 header.site nav.primary a.cta:hover { opacity: .92; background: var(--plum); }
 .menu-toggle { display: none; }
+
+/* Desktop-only nav layout, explicitly scoped so it can never outrank the
+   mobile display:none / .open rules below on specificity. It previously
+   wasn't scoped to a media query at all, so header.site nav.primary
+   (2 classes) beat the mobile nav.primary (1 class) regardless of
+   viewport width, permanently pinning the "closed" mobile menu open. */
+@media (min-width: 901px) {
+  header.site nav.primary { margin-left: auto; display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+  header.site nav.primary a { padding: 8px 12px; }
+  header.site nav.primary a.cta { padding: 10px 20px; }
+}
 
 /* Switch to the hamburger well before the full nav (logo + 5 links + a pill
    button) runs out of room; the old 720px breakpoint left a squeezed zone
