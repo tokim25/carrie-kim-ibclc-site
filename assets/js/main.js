@@ -6,6 +6,7 @@
   if (!toggle || !nav) return;
 
   function closeMenu() {
+    if (!nav.classList.contains('open')) return;
     nav.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
   }
@@ -15,11 +16,35 @@
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 
+  // Also close on any nav link tap, so choosing a page doesn't leave the
+  // menu open underneath the page it navigates to.
+  nav.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', closeMenu);
+  });
+
   // The open mobile menu lives inside the header, so on a small screen it
   // can pin itself across most of the viewport while the page scrolls
-  // underneath it. Close it as soon as scrolling starts. The header itself
-  // (logo, wordmark, menu button) stays permanently visible; it never hides.
+  // underneath it. Close it as soon as the page moves. Three redundant
+  // triggers, since a plain `scroll` listener alone was reported not
+  // firing reliably on at least one real mobile browser:
+  //  1. touchmove fires the instant a drag starts, before any scroll
+  //     offset has actually changed.
+  //  2. scroll, the direct signal, kept as a fallback.
+  //  3. an IntersectionObserver on a 1px sentinel at the very top of the
+  //     document, which reports "scrolled away from the top" independent
+  //     of scroll-event timing/throttling.
+  window.addEventListener('touchmove', closeMenu, { passive: true });
   window.addEventListener('scroll', closeMenu, { passive: true });
+
+  var sentinel = document.getElementById('scroll-sentinel');
+  if (sentinel && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) closeMenu();
+      });
+    }, { threshold: 0 });
+    io.observe(sentinel);
+  }
 })();
 
 // The Thread — draws in once per element, first time it scrolls into view.
