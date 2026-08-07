@@ -12,6 +12,15 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000`.
 
+## Cache-busting CSS and JS
+
+`assets/css/styles.css` and `assets/js/main.js` are linked with a `?v=<hash>`
+query string on every page. GitHub Pages sits behind a CDN that can serve a
+stale cached copy of these files for a while after a push, even through a
+browser hard-refresh; changing the query string forces a fresh fetch. **Bump
+the `?v=` value on all five HTML files whenever either file changes**, or a
+real fix can appear to not have deployed.
+
 ## Before this replaces the live site
 
 - **Contact form isn't wired up.** `contact.html` has a real-looking form with no
