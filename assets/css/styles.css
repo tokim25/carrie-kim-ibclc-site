@@ -103,11 +103,13 @@ header.site .brand svg { width: 32px; height: 26px; flex-shrink: 0; }
 header.site .brand span {
   font-family: var(--font-body); font-weight: 600; font-size: 13px;
   letter-spacing: .1em; text-transform: uppercase;
+  white-space: nowrap;
 }
-header.site nav.primary { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+header.site nav.primary { margin-left: auto; display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 header.site nav.primary a {
   font-size: 14px; color: var(--ink); text-decoration: none;
   padding: 8px 12px; border-radius: 999px;
+  white-space: nowrap;
 }
 header.site nav.primary a:hover,
 header.site nav.primary a[aria-current="page"] { background: var(--surface); }
@@ -118,7 +120,10 @@ header.site nav.primary a.cta {
 header.site nav.primary a.cta:hover { opacity: .92; background: var(--plum); }
 .menu-toggle { display: none; }
 
-@media (max-width: 720px) {
+/* Switch to the hamburger well before the full nav (logo + 5 links + a pill
+   button) runs out of room; the old 720px breakpoint left a squeezed zone
+   where nav items and the CTA button text wrapped awkwardly. */
+@media (max-width: 900px) {
   header.site .bar { flex-wrap: wrap; }
   .menu-toggle {
     display: inline-flex; margin-left: auto; border: 1px solid var(--line);
