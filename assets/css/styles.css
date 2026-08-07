@@ -149,6 +149,17 @@ header.site nav.primary a.cta:hover { opacity: .92; background: var(--plum); }
   .hero figure { order: -1; max-width: 320px; }
 }
 
+/* --- The Thread: nodes are real HTML elements so the SVG's non-uniform
+   preserveAspectRatio="none" stretch (needed so the line fills any width)
+   can't distort them into ellipses. --- */
+.thread-wrap { position: relative; }
+.thread-node {
+  position: absolute; top: 50%; width: 12px; height: 12px;
+  margin-left: -6px; margin-top: -6px;
+  border-radius: 50%; background: var(--gold);
+  opacity: 0;
+}
+
 /* --- Buttons --- */
 .btn {
   display: inline-flex; align-items: center; gap: 8px;

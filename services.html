@@ -63,25 +63,27 @@
   <section class="tight">
     <div class="container">
       <p class="eyebrow">Services</p>
-      <h1>No matter what stage you're in, support is available.</h1>
+      <h1>No matter what stage you're in,<br>support is available.</h1>
       <p class="lede">Breastfeeding changes as your baby grows, so support is organized the same way: by where you and your baby actually are, not a single checklist for every visit.</p>
     </div>
   </section>
 
   <section class="tight">
     <div class="container">
-      <svg class="thread-line" viewBox="0 0 600 34" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <filter id="thread-rough-services" x="-20%" y="-150%" width="140%" height="400%">
-            <feTurbulence type="fractalNoise" baseFrequency="0.02 0.12" numOctaves="2" seed="11" result="n"/>
-            <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
-          </filter>
-        </defs>
-        <path class="js-thread-draw" d="M20,17 C140,-6 180,40 300,17 C420,-6 460,40 580,17" filter="url(#thread-rough-services)"/>
-        <circle class="js-thread-node" cx="20" cy="17" r="6" fill="var(--gold)" opacity="0"/>
-        <circle class="js-thread-node" cx="300" cy="17" r="6" fill="var(--gold)" opacity="0"/>
-        <circle class="js-thread-node" cx="580" cy="17" r="6" fill="var(--gold)" opacity="0"/>
-      </svg>
+      <div class="thread-wrap">
+        <svg class="thread-line" viewBox="0 0 600 34" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <filter id="thread-rough-services" x="-20%" y="-150%" width="140%" height="400%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.02 0.12" numOctaves="2" seed="11" result="n"/>
+              <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+          </defs>
+          <path class="js-thread-draw" d="M20,17 C140,-6 180,40 300,17 C420,-6 460,40 580,17" filter="url(#thread-rough-services)"/>
+        </svg>
+        <span class="thread-node" style="left:3.33%"></span>
+        <span class="thread-node" style="left:50%"></span>
+        <span class="thread-node" style="left:96.67%"></span>
+      </div>
     </div>
   </section>
 

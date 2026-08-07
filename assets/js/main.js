@@ -20,10 +20,13 @@
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   paths.forEach(function (path) {
-    var nodes = path.closest('svg').querySelectorAll('.js-thread-node');
+    // Nodes are real HTML elements (siblings of the SVG in .thread-wrap), not
+    // SVG circles, so the line's non-uniform scaling can't stretch them into ellipses.
+    var wrap = path.closest('.thread-wrap');
+    var nodes = wrap ? wrap.querySelectorAll('.thread-node') : [];
 
     if (reduced) {
-      nodes.forEach(function (n) { n.setAttribute('opacity', '1'); });
+      nodes.forEach(function (n) { n.style.opacity = '1'; });
       return;
     }
 
@@ -40,7 +43,7 @@
       path.style.strokeDashoffset = '0';
       setTimeout(function () {
         nodes.forEach(function (n, i) {
-          setTimeout(function () { n.setAttribute('opacity', '1'); }, i * 120);
+          setTimeout(function () { n.style.opacity = '1'; }, i * 120);
         });
       }, 1100);
     }
