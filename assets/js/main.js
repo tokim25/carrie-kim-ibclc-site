@@ -3,11 +3,47 @@
 (function mobileMenu() {
   var toggle = document.querySelector('.menu-toggle');
   var nav = document.querySelector('nav.primary');
+  var header = document.querySelector('header.site');
   if (!toggle || !nav) return;
+
+  function closeMenu() {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
   toggle.addEventListener('click', function () {
     var open = nav.classList.toggle('open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
+
+  // The open mobile menu lives inside the sticky header, so on a small
+  // screen it can pin itself across most of the viewport while the page
+  // scrolls underneath it. Close it as soon as scrolling starts.
+  window.addEventListener('scroll', closeMenu, { passive: true });
+
+  // Minimize the header itself on scroll: hide it going down, bring it
+  // back going up, so it isn't permanently eating vertical space on a
+  // small screen. Skipped entirely under prefers-reduced-motion.
+  if (header && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var lastY = window.scrollY;
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () {
+        var y = window.scrollY;
+        if (y < 80) {
+          header.classList.remove('hide');
+        } else if (y > lastY) {
+          header.classList.add('hide');
+        } else {
+          header.classList.remove('hide');
+        }
+        lastY = y;
+        ticking = false;
+      });
+    }, { passive: true });
+  }
 })();
 
 // The Thread — draws in once per element, first time it scrolls into view.

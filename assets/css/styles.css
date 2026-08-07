@@ -93,7 +93,10 @@ header.site {
   border-bottom: 1px solid var(--line);
   background: var(--paper);
   position: sticky; top: 0; z-index: 50;
+  transform: translateY(0);
+  transition: transform .25s ease;
 }
+header.site.hide { transform: translateY(-100%); }
 header.site .bar {
   display: flex; align-items: center; gap: 10px;
   padding: 16px 24px;
