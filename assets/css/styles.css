@@ -201,6 +201,7 @@ section + section { border-top: 1px solid var(--line); }
 }
 .band-dark .muted-on-dark { color: #e3cdd4; }
 .band-dark h2 { color: var(--paper); }
+.band-mark { width: 84px; height: auto; margin: 0 auto var(--space-2); display: block; }
 
 /* --- Footer --- */
 footer.site {
