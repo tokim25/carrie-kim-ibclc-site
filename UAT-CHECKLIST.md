@@ -30,15 +30,15 @@ Organized by page, worked in sprints. Check items off as they ship and deploy.
 - [x] Reorder: move "How sessions work" above "Beyond the basics"
 - [x] "How sessions work": add that Carrie is a provider through CuraNatal
 
-## Sprint 3: About page
+## Sprint 3: About page — shipped
 
-- [ ] Hero tagline: rewrite away from "I became a lactation consultant
+- [x] Hero tagline: rewrite away from "I became a lactation consultant
       because of my own breastfeeding challenges..." toward "my own
       struggles made me realize I didn't want others to go through the same
       thing alone"
-- [ ] Subheader: "UC San Diego, and 450+ hours at the bedside" becomes
+- [x] Subheader: "UC San Diego, and 450+ hours at the bedside" becomes
       "...450+ hours of clinical training"
-- [ ] "A career built on listening first" paragraph: replace with the exact
+- [x] "A career built on listening first" paragraph: replace with the exact
       text provided (people need someone to listen, then help find the plan
       that fits their life)
 
