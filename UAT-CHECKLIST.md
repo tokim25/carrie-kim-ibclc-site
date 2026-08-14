@@ -15,20 +15,20 @@ Organized by page, worked in sprints. Check items off as they ship and deploy.
       trained to catch, and that she provides referrals for collaborative
       care when appropriate
 
-## Sprint 2: Services page
+## Sprint 2: Services page — shipped
 
-- [ ] Prenatal section: fix the extra gap between the first two and last two
-      bullets (they're split across two `<ul>` columns; likely needs to be
-      one list or the column split reworked)
-- [ ] Newborns section: add the same four items as the homepage (Positioning,
+- [x] Prenatal section: fix the extra gap between the first two and last two
+      bullets (fixed by dropping the two-column split entirely, one flat
+      list per stage now, matching the homepage's pattern)
+- [x] Newborns section: add the same four items as the homepage (Positioning,
       Pumping, Flange-sizing, Bottle feeding techniques)
-- [ ] Newborns section: fix extra spacing between Engorgement and Mastitis
-- [ ] Older Babies section: fix extra spacing between Bottle refusal and
+- [x] Newborns section: fix extra spacing between Engorgement and Mastitis
+- [x] Older Babies section: fix extra spacing between Bottle refusal and
       Distracted eating
-- [ ] Oral restrictions/tongue-tie content: sync with the updated homepage
+- [x] Oral restrictions/tongue-tie content: sync with the updated homepage
       language (assess, support, and refer for collaborative care)
-- [ ] Reorder: move "How sessions work" above "Beyond the basics"
-- [ ] "How sessions work": add that Carrie is a provider through CuraNatal
+- [x] Reorder: move "How sessions work" above "Beyond the basics"
+- [x] "How sessions work": add that Carrie is a provider through CuraNatal
 
 ## Sprint 3: About page
 
