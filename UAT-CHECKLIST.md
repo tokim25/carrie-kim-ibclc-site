@@ -42,17 +42,17 @@ Organized by page, worked in sprints. Check items off as they ship and deploy.
       text provided (people need someone to listen, then help find the plan
       that fits their life)
 
-## Sprint 4: FAQ page
+## Sprint 4: FAQ page — shipped
 
-- [ ] Remove "What's the difference between an IBCLC and a CLC?" (both the
+- [x] Remove "What's the difference between an IBCLC and a CLC?" (both the
       visible Q&A and the FAQPage JSON-LD entry)
-- [ ] Insurance question: add the $100 travel fee for home visits, and a
+- [x] Insurance question: add the $100 travel fee for home visits, and a
       link to CuraNatal's FAQ page (curanatalhealth.com/faq-1) for current
       coverage details
-- [ ] "What actually happens at a first visit?": add weighted feed, breast
+- [x] "What actually happens at a first visit?": add weighted feed, breast
       assessment, and infant oral assessment
-- [ ] Remove the tongue-tie question (both visible Q&A and JSON-LD)
-- [ ] "When should I reach out?": add that a check-in visit after delivery
+- [x] Remove the tongue-tie question (both visible Q&A and JSON-LD)
+- [x] "When should I reach out?": add that a check-in visit after delivery
       is welcome even without any challenges
 
 ## Sprint 5: Overall, cross-page
