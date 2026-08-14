@@ -250,11 +250,6 @@ footer.site a { color: var(--muted); text-decoration: underline; }
    unhurried pacing. One resonant sentence, verbatim from the real review,
    does the trust-building job without the reading commitment, and the
    full review is always one click away via the linked attribution. --- */
-.rating-line {
-  font-size: 12.5px; letter-spacing: .04em; color: var(--muted); margin: 2px 0 var(--space-4);
-}
-.rating-line .stars { color: var(--gold); letter-spacing: 1px; }
-
 .testimonial-strip { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
 @media (max-width: 800px) { .testimonial-strip { grid-template-columns: 1fr; gap: var(--space-4); } }
 
