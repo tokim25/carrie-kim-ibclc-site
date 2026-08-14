@@ -149,7 +149,7 @@ header.site nav.primary a.cta:hover { opacity: .92; background: var(--plum); }
 
 /* --- Hero --- */
 .hero { padding: var(--space-6) 0 var(--space-5); }
-.hero .grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: var(--space-5); align-items: center; }
+.hero .grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: var(--space-5); align-items: center; }
 .hero .actions { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-3); }
 .hero figure { margin: 0; border-radius: var(--radius-lg); overflow: hidden; }
 .hero figure img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/4.6; }
@@ -158,9 +158,21 @@ header.site nav.primary a.cta:hover { opacity: .92; background: var(--plum); }
   margin-top: var(--space-2);
 }
 
-@media (max-width: 880px) {
+/* Stacked single-column hero runs further up than the site's usual 900px
+   nav breakpoint: the hero h1 is two full sentences at display size, and
+   the two-column layout doesn't have enough width for the second sentence
+   to stay on one line until the container hits its own 1120px cap. Below
+   that, stacking avoids a mid-sentence wrap onto an orphan third line. */
+@media (max-width: 1180px) {
   .hero .grid { grid-template-columns: 1fr; }
   .hero figure { order: -1; max-width: 320px; }
+}
+
+/* Below ~480px the h1's own clamp() floor (32px) is still too wide for the
+   second sentence to fit on one line at full container width, causing the
+   same orphan-third-line wrap as the desktop squeeze above. */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 26px; }
 }
 
 /* --- The Thread: nodes are real HTML elements so the SVG's non-uniform
