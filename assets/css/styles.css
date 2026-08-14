@@ -232,29 +232,40 @@ footer.site a { color: var(--muted); text-decoration: underline; }
 }
 .band-dark .book-reassurance { color: #e3cdd4; }
 
-/* --- Testimonial --- */
-.testimonials-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
-@media (max-width: 800px) { .testimonials-grid { grid-template-columns: 1fr; } }
-.testimonial {
-  background: var(--surface); border: 1px solid var(--line);
-  border-radius: var(--radius-lg); padding: var(--space-4);
-  display: flex; flex-direction: column;
+/* --- Testimonials: short pull-quotes, not full reviews. DM Serif Display
+   is built for headline-length text; a full ~700-character review set at
+   display size reads as a dense wall of text and fights the site's
+   unhurried pacing. One resonant sentence, verbatim from the real review,
+   does the trust-building job without the reading commitment, and the
+   full review is always one click away via the linked attribution. --- */
+.rating-line {
+  font-size: 12.5px; letter-spacing: .04em; color: var(--muted); margin: 2px 0 var(--space-4);
 }
-.testimonial blockquote {
+.rating-line .stars { color: var(--gold); letter-spacing: 1px; }
+
+.testimonial-strip { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
+@media (max-width: 800px) { .testimonial-strip { grid-template-columns: 1fr; gap: var(--space-4); } }
+
+.pull-quote { margin: 0; padding-left: var(--space-3); border-left: 2px solid var(--gold); }
+.pull-quote blockquote {
   margin: 0 0 var(--space-2); font-family: var(--font-headline); font-weight: 400;
-  font-size: clamp(17px, 2vw, 19px); line-height: 1.45; color: var(--ink);
+  font-size: clamp(19px, 2.2vw, 23px); line-height: 1.4; color: var(--ink);
   text-wrap: balance;
 }
-.testimonial cite {
-  font-style: normal; font-size: 13.5px; color: var(--muted); margin-top: auto;
+.pull-quote figcaption { font-size: 12.5px; color: var(--muted); }
+.pull-quote figcaption a { color: var(--plum); text-decoration: underline; }
+
+/* Single inline pull-quote (used on the Services page next to the
+   tongue-tie content), same visual language, no left rule since it sits
+   inside an existing text column rather than a dedicated strip. */
+.pull-quote-inline {
+  margin: var(--space-3) 0 0; font-family: var(--font-headline); font-weight: 400;
+  font-size: 19px; line-height: 1.4; color: var(--ink); text-wrap: balance;
 }
-.testimonial cite a { color: inherit; text-decoration: underline; }
-.testimonial-echo {
-  border-left: 3px solid var(--plum); padding: var(--space-2) 0 var(--space-2) var(--space-3);
-  margin-top: var(--space-3);
+.pull-quote-inline figcaption {
+  font-family: var(--font-body); font-size: 12.5px; color: var(--muted); margin-top: var(--space-1);
 }
-.testimonial-echo p { font-size: 14.5px; font-style: italic; color: var(--ink); margin: 0 0 6px; }
-.testimonial-echo cite { font-style: normal; font-size: 12.5px; color: var(--muted); }
+.pull-quote-inline figcaption a { color: var(--plum); text-decoration: underline; }
 
 /* --- Utility --- */
 .center { text-align: center; }
