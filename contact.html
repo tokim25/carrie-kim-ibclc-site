@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=8">
+<link rel="stylesheet" href="assets/css/styles.css?v=10">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -64,38 +64,11 @@
   </section>
 
   <section class="tight">
-    <div class="container grid-2">
-      <div class="card">
-        <h3>Send a note</h3>
-        <!--
-          TODO before launch: wire this form to a real submission handler
-          (Formspree, Netlify Forms, or the equivalent on wherever this
-          site is hosted). It is not yet connected to anything.
-        -->
-        <form action="#" method="post">
-          <div class="stack">
-            <label>
-              <span class="small">Name</span><br>
-              <input type="text" name="name" required style="width:100%; padding:10px; border:1px solid var(--line); border-radius:8px; font:inherit; margin-top:4px;">
-            </label>
-            <label>
-              <span class="small">Email</span><br>
-              <input type="email" name="email" required style="width:100%; padding:10px; border:1px solid var(--line); border-radius:8px; font:inherit; margin-top:4px;">
-            </label>
-            <label>
-              <span class="small">Message</span><br>
-              <textarea name="message" rows="5" required style="width:100%; padding:10px; border:1px solid var(--line); border-radius:8px; font:inherit; margin-top:4px;"></textarea>
-            </label>
-            <button class="btn btn-primary" type="submit" style="align-self:flex-start;">Send</button>
-          </div>
-        </form>
-      </div>
-      <div>
-        <h3>How sessions work</h3>
-        <p>In-home throughout the Greater Sacramento area, in-office in Orangevale, CA at the CuraNatal office, or virtually. Insurance or cash pay options are available when you book.</p>
-        <h3>Response time</h3>
-        <p>Notes sent here are answered as soon as possible; for anything time-sensitive, booking directly is the faster path.</p>
-      </div>
+    <div class="container">
+      <h3>How sessions work</h3>
+      <p>In-home throughout the Greater Sacramento area, in-office in Orangevale, CA at the CuraNatal office, or virtually. Insurance or cash pay options are available when you book.</p>
+      <h3>Response time</h3>
+      <p>Emails are answered as soon as possible; for anything time-sensitive, booking directly is the faster path.</p>
     </div>
   </section>
 
@@ -109,6 +82,6 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="assets/js/main.js?v=8"></script>
+<script src="assets/js/main.js?v=10"></script>
 </body>
 </html>
