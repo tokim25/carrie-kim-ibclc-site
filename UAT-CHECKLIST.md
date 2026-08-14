@@ -55,19 +55,26 @@ Organized by page, worked in sprints. Check items off as they ship and deploy.
 - [x] "When should I reach out?": add that a check-in visit after delivery
       is welcome even without any challenges
 
-## Sprint 5: Overall, cross-page
+## Sprint 5: Overall, cross-page — shipped
 
-- [ ] Add a "Book" CTA to every page that's missing one at the top (Services
+- [x] Add a "Book" CTA to every page that's missing one at the top (Services
       currently has no hero-level CTA, only the closing band)
-- [ ] FAQ's closing band button currently says "Contact Carrie" instead of
+- [x] FAQ's closing band button currently says "Contact Carrie" instead of
       "Book a Consult." Make it consistent with the other four pages.
-- [ ] Add one-line booking reassurance under every Book button: "You'll be
+- [x] Add one-line booking reassurance under every Book button: "You'll be
       booking directly with Carrie. Look for her name on the next screen."
-- [ ] Add the Jessica Dickinson Google review as a testimonial section on
+      (Scoped to standalone CTA buttons, hero and closing-band, not the
+      persistent nav pill.)
+- [x] Add the Jessica Dickinson Google review as a testimonial section on
       the homepage, positioned right before the closing "Let's exhale
       together" band
-- [ ] Consider a shorter echo of the same testimonial on the Services page,
-      near the tongue-tie content it specifically validates
+- [x] Shorter echo of the same testimonial added on the Services page, next
+      to the tongue-tie content it specifically validates
+
+---
+
+**All five sprints shipped.** See git history for the full change log per
+sprint.
 
 ---
 
