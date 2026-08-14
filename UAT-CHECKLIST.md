@@ -2,15 +2,15 @@
 
 Organized by page, worked in sprints. Check items off as they ship and deploy.
 
-## Sprint 1: Homepage
+## Sprint 1: Homepage — shipped
 
-- [ ] Newborns section: add Positioning, Pumping, Flange-sizing, Bottle feeding
+- [x] Newborns section: add Positioning, Pumping, Flange-sizing, Bottle feeding
       techniques to the bullet list
-- [ ] "Why an IBCLC" section: remove the first paragraph (the CLC/RN comparison)
-- [ ] Replace it with copy built around "the gold standard of lactation
+- [x] "Why an IBCLC" section: remove the first paragraph (the CLC/RN comparison)
+- [x] Replace it with copy built around "the gold standard of lactation
       training: hundreds of hours of in-depth lactation education and
       hands-on clinical training," rephrased into brand voice
-- [ ] Tongue-tie paragraph: make clear Carrie both assesses AND provides
+- [x] Tongue-tie paragraph: make clear Carrie both assesses AND provides
       support for tongue-ties and oral restrictions many consultants aren't
       trained to catch, and that she provides referrals for collaborative
       care when appropriate
